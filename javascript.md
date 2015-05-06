@@ -23,3 +23,27 @@ modify(obj);
 alert(obj.a);  //alerts just "hello"
 
 ```
+Another scenario 
+
+```
+function changeStuff(a, b, c) {
+  a = a * 10;
+  b.item = "changed";
+  c = {item: "changed"};
+}
+
+var num = 10;
+var obj1 = {item: "unchanged"};
+var obj2 = {item: "unchanged"};
+
+changeStuff(num, obj1, obj2);
+
+console.log(num); //10
+console.log(obj1.item); //changed   
+console.log(obj2.item); //unchaged
+
+```
+
+The reason is that within changeStuff, num, obj1, and obj2 are references. When you change the item property of the object referenced by obj1, you are changing the value of the item property that was originally set to "unchanged". When you assign obj2 a value of {item: "changed"} you are changing the reference to a new object (which immediately goes out of scope when the function exits).
+
+It's always pass by value, but for objects the value of the variable is a reference. Because of this, when you pass an object and change its members, those changes persist outside of the function. This makes it look like pass by reference. But if you actually change the value of the object variable you will see that the change does not persist, proving it's really pass by value.
