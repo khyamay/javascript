@@ -52,3 +52,24 @@ It's always pass by value, but for objects the value of the variable is a refere
 - Javascript is always pass by value, but when a variable refers to an object (including arrays), the "value" is a - reference to the object.
 - Changing the value of a variable never changes the underlying primitive or object, it just points the variable to a new primitive or object.
 - However, changing a property of an object referenced by a variable does change the underlying object.
+
+###Export Default
+Using default means that this ```export``` is the primary export of this file. It's more than just a formality though, using the ```default``` syntax also makes importing easier. With the ```WidgetList``` example from below, we are exporting ```WidgetList``` by default. This means that when we ```import``` WidgetList, we will get the exact same thing that was exported:
+
+```
+import React from 'react';
+
+const WidgetList = React.createClass({
+  render: function() {
+    return (
+      <ul className="widget-list">
+        <li>Widget 1</li>
+        <li>Widget 2</li>
+        <li>Widget 3</li>
+      </ul>
+    );
+  }
+});
+
+export default WidgetList;
+```
