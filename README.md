@@ -1,2 +1,2 @@
-# javascript
-For better understanding of Javascript
+
+###For better understanding of Javascript and CSS
