@@ -1,2 +1,2 @@
 
-###For better understanding of Javascript and CSS
+####TIL / for future reference about ```js/css```
