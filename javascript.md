@@ -88,3 +88,22 @@ The Cross-Origin Resource Sharing standard works by adding new HTTP headers that
 
 The ```.position()``` method allows us to retrieve the current position of an element relative to the offset parent
 The ```.offset()``` method allows us to retrieve the current position of an element relative to the document.
+
+
+###Mutating arrays
+ 	
+| Safe methods  | Mutating methods|
+| ------------- |:-------------:|
+| concat()      | splice()      |
+| map()         | push()        |
+| reduce()      | pop()         |
+| reduceRight() | shift()       |
+| filter()      | unshift()     |
+| slice()       | fill()        |
+|               | reverse()     |
+|               | sort()        |
+	
+	
+
+
+ 
