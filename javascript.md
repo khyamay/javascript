@@ -85,3 +85,6 @@ The Cross-Origin Resource Sharing standard works by adding new HTTP headers that
 
 ```Stack``` is LIFO (Last In First Out) and 
 ```Queue``` is FIFO (First In First Out)
+
+The ```.position()``` method allows us to retrieve the current position of an element relative to the offset parent
+The ```.offset()``` method allows us to retrieve the current position of an element relative to the document.
