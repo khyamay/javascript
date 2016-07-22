@@ -63,3 +63,13 @@ site-search {} /* Block */
 .person--female__hand {}
 .person__hand--left {}
 ```
+
+The CSS box model is rather complicated, particularly when it comes to scrolling content. While the browser uses the values from your CSS to draw boxes, determining all the dimensions using JS is not straight-forward if you only have the CSS.
+
+That's why each element has six DOM properties for your convenience: offsetWidth, offsetHeight, clientWidth, clientHeight, scrollWidth and scrollHeight. These are read-only attributes representing the current visual layout, and all of them are integers (thus possibly subject to rounding errors).
+
+![](http://i.stack.imgur.com/5AAyW.png)
+
+- ```offsetWidth```, ```offsetHeight```: The size of the visual box incuding all borders. Can be calculated by adding width/height and paddings and borders, if the element has display: block
+- ```clientWidth```, ```clientHeight```: The visual portion of the box content, not including borders or scroll bars , but includes padding . Can not be calculated directly from CSS, depends on the system's scroll bar size.
+- ```scrollWidth```, ```scrollHeight```: The size of all of the box's content, including the parts that are currently hidden outside the scrolling area. Can not be calculated directly from CSS, depends on the content.
